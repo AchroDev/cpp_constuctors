@@ -29,6 +29,9 @@ public:
 // Log class for default constructor removal example
 class Log
 {
+private:
+    Log() {}
+
 public:
     static void Write()
     {
@@ -37,8 +40,8 @@ public:
 
 int main()
 {
-    Log::Write(); // If you only want people to use the class like this
-    Log l;        // and not be able to create an instance like this, you can hide the constructor or delete it
+    Log::Write(); // Now has to be like this
+    Log l;        // and instances can't be created now because the constructor is inaccessible
 
     // instantiating the Entity class
     Entity e(420.0f, 69.0f); // With the use of member variables assigned to the parameters, you can initalize the values here.
