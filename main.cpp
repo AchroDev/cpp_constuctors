@@ -1,8 +1,24 @@
 #include <iostream>
 
-#define LOG(x) std::cout << x << std::endl;
+// Constructors!!!
 
-int main(){
-    LOG("Hello World!");
+class Entity
+{
+public:
+    float X, Y;
+
+    // example print method
+    void Print()
+    {
+        std::cout << X << ", " << Y << std::endl;
+    }
+};
+
+int main()
+{
+    // instantiating the Entity class
+    Entity e;
+    // calling the print method
+    e.Print();
     std::cin.get();
 }
