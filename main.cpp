@@ -26,8 +26,20 @@ public:
     }
 };
 
+// Log class for default constructor removal example
+class Log
+{
+public:
+    static void Write()
+    {
+    }
+};
+
 int main()
 {
+    Log::Write(); // If you only want people to use the class like this
+    Log l;        // and not be able to create an instance like this, you can hide the constructor or delete it
+
     // instantiating the Entity class
     Entity e(420.0f, 69.0f); // With the use of member variables assigned to the parameters, you can initalize the values here.
     e.Print();
