@@ -26,9 +26,9 @@ int main()
     // instantiating the Entity class
     Entity e;
     e.Init(); // now initializing the entity
-    // Trying to print the X variable, will not compile as it hasn't been initialized yet
+    // Trying to print the X variable, now prints 0
     std::cout << e.X << std::endl;
     // calling the print method
-    e.Print(); // currently prints seemingly random values, with no definition/initialization they carry the memory value
+    e.Print(); // now with the init, we see the values being printed correctly
     std::cin.get();
 }
